@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn1_findCityIdByName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/get_city_id"
+        app:layout_constraintEnd_toStartOf="@id/btn2_GetReportByCityId"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn2_GetReportByCityId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/getByCityId"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button3"
+        app:layout_constraintBottom_toBottomOf="@+id/btn1_findCityIdByName"
+        app:layout_constraintStart_toEndOf="@id/btn1_findCityIdByName" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/get_by_city"
+        app:layout_constraintBottom_toBottomOf="@id/btn2_GetReportByCityId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn2_GetReportByCityId" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/dataInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Enter City Name/Id"
+        app:layout_constraintTop_toBottomOf="@id/btn1_findCityIdByName"
+        tools:layout_editor_absoluteX="1dp" />
+
+    <TextView
+        android:id="@+id/reportDisplay"
+        android:layout_width="411dp"
+        android:layout_height="590dp"
+        android:hint="weather update"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dataInput" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
